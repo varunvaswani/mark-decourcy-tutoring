@@ -109,7 +109,7 @@ function App() {
               </div>
               <div className="border-l-2 border-amber-200 pl-8">
                 <h4 className="font-serif text-xl mb-3 text-slate-900">FRQ Dissection</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">Strategic training on Free Response Questions to ensure students can articulate complex economic shifts clearly.</p>
+                <p className="text-slate-500 text-sm leading-relaxed">Strategic training on Free Response Questions. Students learn to analyze fiscal and monetary policy decisions as well as exogenous shocks as they apply to various market graphs, backed by sound economic reasoning.</p>
               </div>
             </div>
           </section>
