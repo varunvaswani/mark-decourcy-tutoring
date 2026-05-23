@@ -1,12 +1,13 @@
+import React from 'react';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#fcfaf7] text-slate-900 font-sans antialiased p-0 md:p-6 lg:p-12 flex items-center justify-center">
-      <main className="max-w-6xl w-full bg-white shadow-[0_35px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row min-h-[800px] border border-stone-200 overflow-hidden">
+    <div className="min-h-screen bg-[#fcfaf7] text-slate-900 font-sans antialiased p-0 md:p-6 lg:p-12 flex flex-col items-center">
+      <main className="max-w-6xl w-full bg-white shadow-[0_35px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row border border-stone-200 overflow-hidden mb-12">
         
         {/* Sidebar: The Authority Column */}
         <aside className="lg:w-[380px] bg-[#450a0a] text-stone-100 p-10 flex flex-col shrink-0 border-r border-stone-200">
-          <div className="mb-10 text-center lg:text-left">
+          <div className="mb-10 text-center lg:text-left text-stone-50">
             <div className="w-48 h-64 bg-stone-800 mx-auto lg:mx-0 mb-8 overflow-hidden transition-all duration-700 shadow-2xl border-4 border-stone-100/20">
               <img 
                 src="/mark-photo.jpg" 
@@ -14,7 +15,7 @@ function App() {
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
               />
             </div>
-            <h1 className="font-serif text-4xl mb-2 tracking-tight text-stone-50">Mark DeCourcy</h1>
+            <h1 className="font-serif text-4xl mb-2 tracking-tight">Mark DeCourcy</h1>
             <p className="text-stone-400 font-bold uppercase tracking-[0.2em] text-[10px] mb-8">
               AP Macroeconomics Specialist
             </p>
@@ -32,10 +33,10 @@ function App() {
             </div>
           </div>
 
-          {/* Investment & Policies - Re-integrated into the sidebar flow */}
+          {/* Investment & Policies */}
           <div className="space-y-8 mb-12 border-t border-stone-100/10 pt-10">
             <div>
-              <h3 className="text-stone-500 uppercase tracking-widest text-[10px] font-black mb-5">Instructional Investment</h3>
+              <h3 className="text-stone-500 uppercase tracking-widest text-[10px] font-black mb-5 text-stone-50">Instructional Investment</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-stone-300 font-serif">Hourly Session</span>
@@ -84,7 +85,7 @@ function App() {
           </section>
 
           {/* Specializations Grid - 3x2 Layout */}
-          <section className="mb-12">
+          <section className="mb-8">
             <h2 className="text-stone-400 font-black text-[10px] uppercase tracking-[0.4em] mb-10">Strategic Focus Areas</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
               <div className="border-l-2 border-amber-200 pl-8">
@@ -113,43 +114,42 @@ function App() {
               </div>
             </div>
           </section>
-
-          {/* Endorsements Section - Carousel Layout */}
-          <section className="mb-20">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-stone-400 font-black text-[10px] uppercase tracking-[0.4em]">Student Endorsements</h2>
-              <div className="flex gap-2 text-stone-300 text-[10px] uppercase tracking-widest font-bold items-center">
-                <span>Scroll</span>
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </div>
-            </div>
-            
-            <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory no-scrollbar">
-              {[
-                { name: "AP Student", result: "Scored a 5 on AP Exam", quote: "Mr. DeCourcy has a unique ability to make the most complex economic models feel intuitive. His emphasis on graphing was the key to my success." },
-                { name: "Undergraduate Student", result: "A in Macroeconomics", quote: "The sound economic reasoning I learned from Mark didn't just help me pass—it changed how I view the world. Truly a master of the subject." },
-                { name: "Parent of AP Student", result: "Score Improvement", quote: "After just a few sessions, my son's confidence in his AP Macro class skyrocketed. Mark's teacher-led yet student-centered approach is incredibly effective." },
-                { name: "Budget Challenge Participant", result: "Financial Literacy Mastery", quote: "The Budget Challenge program was life-changing. Mark's guidance helped me understand personal finance in a way that felt real and applicable." },
-                { name: "AP Student", result: "Scored a 5 on AP Exam", quote: "Mastering the FRQs seemed impossible until I worked with Mark. He breaks down the scoring rubrics and policy analysis perfectly." }
-              ].map((testimonial, idx) => (
-                <div key={idx} className="min-w-[300px] md:min-w-[400px] snap-start bg-stone-50/50 p-8 border border-stone-100 rounded-sm flex flex-col justify-between">
-                  <p className="text-slate-600 italic text-sm leading-relaxed mb-6">"{testimonial.quote}"</p>
-                  <div className="border-t border-stone-200 pt-4">
-                    <h5 className="font-serif text-slate-900 font-bold text-sm">{testimonial.name}</h5>
-                    <p className="text-amber-600 text-[10px] uppercase tracking-widest font-black mt-1">{testimonial.result}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Footer inside content area */}
-          <footer className="mt-auto pt-10 border-t border-stone-100 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.3em] font-bold text-stone-400">
-            <p>Mark DeCourcy Tutoring • Fayette County, GA</p>
-            <p className="mt-4 md:mt-0">© {new Date().getFullYear()} All Rights Reserved</p>
-          </footer>
         </article>
       </main>
+
+      {/* Endorsements Section - Full Width Breakout */}
+      <section className="max-w-6xl w-full mb-12 px-4 lg:px-0">
+        <div className="flex items-center justify-between mb-8 px-4">
+          <h2 className="text-stone-400 font-black text-[10px] uppercase tracking-[0.4em]">Student Endorsements</h2>
+          <div className="flex gap-2 text-stone-300 text-[10px] uppercase tracking-widest font-bold items-center">
+            <span>Scroll Success Stories</span>
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
+        </div>
+        
+        <div className="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory no-scrollbar scroll-smooth">
+          {[
+            { name: "AP Student", result: "Scored a 5 on AP Exam", quote: "Mr. DeCourcy has a unique ability to make the most complex economic models feel intuitive. His emphasis on graphing was the key to my success." },
+            { name: "Undergraduate Student", result: "A in Macroeconomics", quote: "The sound economic reasoning I learned from Mark didn't just help me pass—it changed how I view the world. Truly a master of the subject." },
+            { name: "Parent of AP Student", result: "Score Improvement", quote: "After just a few sessions, my son's confidence in his AP Macro class skyrocketed. Mark's teacher-led yet student-centered approach is incredibly effective." },
+            { name: "Budget Challenge Participant", result: "Financial Literacy Mastery", quote: "The Budget Challenge program was life-changing. Mark's guidance helped me understand personal finance in a way that felt real and applicable." },
+            { name: "AP Student", result: "Scored a 5 on AP Exam", quote: "Mastering the FRQs seemed impossible until I worked with Mark. He breaks down the scoring rubrics and policy analysis perfectly." }
+          ].map((testimonial, idx) => (
+            <div key={idx} className="min-w-[280px] md:min-w-[420px] snap-start bg-white p-10 border border-stone-200 shadow-sm flex flex-col justify-between rounded-sm">
+              <p className="text-slate-600 italic text-base leading-relaxed mb-8">"{testimonial.quote}"</p>
+              <div className="border-t border-stone-100 pt-6">
+                <h5 className="font-serif text-slate-900 font-bold text-sm">{testimonial.name}</h5>
+                <p className="text-amber-600 text-[10px] uppercase tracking-widest font-black mt-1">{testimonial.result}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer className="max-w-6xl w-full pt-10 pb-16 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 px-4 lg:px-0">
+        <p>Mark DeCourcy Tutoring • Fayette County, GA</p>
+        <p className="mt-4 md:mt-0">© {new Date().getFullYear()} All Rights Reserved</p>
+      </footer>
     </div>
   );
 }
