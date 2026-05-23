@@ -114,6 +114,28 @@ function App() {
             </div>
           </section>
 
+          {/* Endorsements Section */}
+          <section className="mb-20">
+            <h2 className="text-stone-400 font-black text-[10px] uppercase tracking-[0.4em] mb-10">Student Endorsements</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                { name: "AP Student", result: "Scored a 5 on AP Exam", quote: "Mr. DeCourcy has a unique ability to make the most complex economic models feel intuitive. His emphasis on graphing was the key to my success." },
+                { name: "Undergraduate Student", result: "A in Macroeconomics", quote: "The sound economic reasoning I learned from Mark didn't just help me pass—it changed how I view the world. Truly a master of the subject." },
+                { name: "Parent of AP Student", result: "Score Improvement", quote: "After just a few sessions, my son's confidence in his AP Macro class skyrocketed. Mark's teacher-led yet student-centered approach is incredibly effective." },
+                { name: "Budget Challenge Participant", result: "Financial Literacy Mastery", quote: "The Budget Challenge program was life-changing. Mark's guidance helped me understand personal finance in a way that felt real and applicable." },
+                { name: "AP Student", result: "Scored a 5 on AP Exam", quote: "Mastering the FRQs seemed impossible until I worked with Mark. He breaks down the scoring rubrics and policy analysis perfectly." }
+              ].map((testimonial, idx) => (
+                <div key={idx} className="bg-stone-50/50 p-8 border border-stone-100 rounded-sm">
+                  <p className="text-slate-600 italic text-sm leading-relaxed mb-6">"{testimonial.quote}"</p>
+                  <div className="border-t border-stone-200 pt-4">
+                    <h5 className="font-serif text-slate-900 font-bold text-sm">{testimonial.name}</h5>
+                    <p className="text-amber-600 text-[10px] uppercase tracking-widest font-black mt-1">{testimonial.result}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* Footer inside content area */}
           <footer className="mt-auto pt-10 border-t border-stone-100 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.3em] font-bold text-stone-400">
             <p>Mark DeCourcy Tutoring • Fayette County, GA</p>
