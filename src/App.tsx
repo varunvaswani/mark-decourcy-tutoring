@@ -73,6 +73,20 @@ function App() {
 
         {/* Main: The Content Column */}
         <article className="flex-1 p-8 md:p-16 lg:p-20 overflow-y-auto">
+          {/* Featured Endorsement (The "Credibility Lead") */}
+          <section className="mb-20 border-b border-stone-100 pb-16">
+            <div className="relative">
+              <svg className="absolute -top-6 -left-8 w-16 h-16 text-stone-100 -z-10" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8v8H6v-8h4zm12 0v8h-4v-8h4z"/></svg>
+              <h3 className="font-serif text-2xl md:text-3xl text-slate-800 leading-relaxed mb-6 italic">
+                "After just a few sessions, my son's confidence in his AP Macro class skyrocketed. Mark's teacher-led yet student-centered approach is incredibly effective."
+              </h3>
+              <div className="flex items-center gap-4">
+                <div className="h-px w-8 bg-amber-400"></div>
+                <p className="text-[10px] uppercase tracking-[0.3em] font-black text-stone-400">Parent of AP Macro Student</p>
+              </div>
+            </div>
+          </section>
+
           {/* Philosophy */}
           <section className="mb-20">
             <h2 className="text-[#991b1b] font-black text-[10px] uppercase tracking-[0.4em] mb-6">Pedagogical Philosophy</h2>
