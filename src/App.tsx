@@ -32,26 +32,30 @@ function App() {
             </div>
           </div>
 
-          {/* Rates */}
-          <div className="bg-stone-900/40 border border-stone-100/5 p-6 mb-10 rounded-sm">
-            <h3 className="text-amber-200/50 uppercase tracking-widest text-[9px] font-black mb-4 italic">Private Instruction Rates</h3>
-            <div className="flex justify-between items-baseline mb-3">
-              <span className="text-stone-300 text-sm font-serif italic">Full Session (60m)</span>
-              <span className="text-xl font-serif text-stone-50">$80</span>
+          {/* Investment & Policies - Re-integrated into the sidebar flow */}
+          <div className="space-y-8 mb-12 border-t border-stone-100/10 pt-10">
+            <div>
+              <h3 className="text-stone-500 uppercase tracking-widest text-[10px] font-black mb-5">Instructional Investment</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-stone-300 font-serif">Hourly Session</span>
+                  <span className="text-2xl font-serif text-amber-200">$80</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-stone-300 font-serif">Half-Hour Session</span>
+                  <span className="text-2xl font-serif text-amber-200">$50</span>
+                </div>
+              </div>
             </div>
-            <div className="flex justify-between items-baseline mb-6">
-              <span className="text-stone-300 text-sm font-serif italic">Half Session (30m)</span>
-              <span className="text-xl font-serif text-stone-50">$50</span>
-            </div>
-            
-            <div className="pt-4 border-t border-stone-100/5 space-y-3">
-              <p className="text-[10px] text-stone-400 leading-relaxed italic">
-                <strong className="text-stone-300 not-italic uppercase tracking-tighter mr-1">Groups:</strong> 
-                Rates may be split among up to 3 students per session.
+
+            <div className="space-y-3 text-xs text-stone-400 leading-relaxed">
+              <p className="flex items-start">
+                <span className="text-amber-200 mr-3">•</span>
+                <span>Group sessions (up to 3 students) available at no extra cost.</span>
               </p>
-              <p className="text-[10px] text-stone-400 leading-relaxed italic">
-                <strong className="text-stone-300 not-italic uppercase tracking-tighter mr-1">Location:</strong> 
-                Serving Fayette County & local radius. Travel fees may apply.
+              <p className="flex items-start">
+                <span className="text-amber-200 mr-3">•</span>
+                <span>Serving Fayette County and surrounding local radius.</span>
               </p>
             </div>
           </div>
