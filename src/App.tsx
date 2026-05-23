@@ -114,10 +114,17 @@ function App() {
             </div>
           </section>
 
-          {/* Endorsements Section */}
+          {/* Endorsements Section - Carousel Layout */}
           <section className="mb-20">
-            <h2 className="text-stone-400 font-black text-[10px] uppercase tracking-[0.4em] mb-10">Student Endorsements</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-stone-400 font-black text-[10px] uppercase tracking-[0.4em]">Student Endorsements</h2>
+              <div className="flex gap-2 text-stone-300 text-[10px] uppercase tracking-widest font-bold items-center">
+                <span>Scroll</span>
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </div>
+            </div>
+            
+            <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory no-scrollbar">
               {[
                 { name: "AP Student", result: "Scored a 5 on AP Exam", quote: "Mr. DeCourcy has a unique ability to make the most complex economic models feel intuitive. His emphasis on graphing was the key to my success." },
                 { name: "Undergraduate Student", result: "A in Macroeconomics", quote: "The sound economic reasoning I learned from Mark didn't just help me pass—it changed how I view the world. Truly a master of the subject." },
@@ -125,7 +132,7 @@ function App() {
                 { name: "Budget Challenge Participant", result: "Financial Literacy Mastery", quote: "The Budget Challenge program was life-changing. Mark's guidance helped me understand personal finance in a way that felt real and applicable." },
                 { name: "AP Student", result: "Scored a 5 on AP Exam", quote: "Mastering the FRQs seemed impossible until I worked with Mark. He breaks down the scoring rubrics and policy analysis perfectly." }
               ].map((testimonial, idx) => (
-                <div key={idx} className="bg-stone-50/50 p-8 border border-stone-100 rounded-sm">
+                <div key={idx} className="min-w-[300px] md:min-w-[400px] snap-start bg-stone-50/50 p-8 border border-stone-100 rounded-sm flex flex-col justify-between">
                   <p className="text-slate-600 italic text-sm leading-relaxed mb-6">"{testimonial.quote}"</p>
                   <div className="border-t border-stone-200 pt-4">
                     <h5 className="font-serif text-slate-900 font-bold text-sm">{testimonial.name}</h5>
