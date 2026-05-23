@@ -39,9 +39,20 @@ function App() {
               <span className="text-stone-300 text-sm font-serif italic">Full Session (60m)</span>
               <span className="text-xl font-serif text-stone-50">$80</span>
             </div>
-            <div className="flex justify-between items-baseline">
+            <div className="flex justify-between items-baseline mb-6">
               <span className="text-stone-300 text-sm font-serif italic">Half Session (30m)</span>
               <span className="text-xl font-serif text-stone-50">$50</span>
+            </div>
+            
+            <div className="pt-4 border-t border-stone-100/5 space-y-3">
+              <p className="text-[10px] text-stone-400 leading-relaxed italic">
+                <strong className="text-stone-300 not-italic uppercase tracking-tighter mr-1">Groups:</strong> 
+                Rates may be split among up to 3 students per session.
+              </p>
+              <p className="text-[10px] text-stone-400 leading-relaxed italic">
+                <strong className="text-stone-300 not-italic uppercase tracking-tighter mr-1">Location:</strong> 
+                Serving Fayette County & local radius. Travel fees may apply.
+              </p>
             </div>
           </div>
 
