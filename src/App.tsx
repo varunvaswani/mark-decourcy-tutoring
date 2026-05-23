@@ -2,62 +2,111 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4">
-      <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-slate-900 mb-4">Mark DeCourcy</h1>
-        <p className="text-xl text-slate-600">Expert AP Macroeconomics Tutoring</p>
-      </header>
-
-      <main className="max-w-3xl w-full bg-white rounded-2xl shadow-xl p-8">
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-slate-800 mb-4 border-b pb-2">Experience & Credentials</h2>
-          <ul className="space-y-3 text-slate-700">
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              30+ years of teaching experience.
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              31 years teaching GA High School Economics Standards.
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              28 years teaching AP Macro in the Fayette County school system.
-            </li>
-          </ul>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-slate-800 mb-4 border-b pb-2">Tutoring Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-slate-50 p-4 rounded-lg">
-              <h3 className="font-bold text-slate-900 mb-2">Individual Sessions</h3>
-              <p className="text-slate-600">Tailored 1-on-1 support for specific student needs.</p>
-              <p className="mt-2 font-semibold text-blue-600">Rate: [Contact for Pricing]</p>
+    <div className="min-h-screen bg-[#fcfaf7] text-slate-900 font-sans antialiased p-0 md:p-6 lg:p-12 flex items-center justify-center">
+      <main className="max-w-6xl w-full bg-white shadow-[0_35px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col lg:flex-row min-h-[800px] border border-stone-200 overflow-hidden">
+        
+        {/* Sidebar: The Authority Column */}
+        <aside className="lg:w-[380px] bg-[#450a0a] text-stone-100 p-10 flex flex-col shrink-0 border-r border-stone-200">
+          <div className="mb-10 text-center lg:text-left">
+            <div className="w-48 h-64 bg-stone-800 mx-auto lg:mx-0 mb-8 overflow-hidden transition-all duration-700 shadow-2xl border-4 border-stone-100/20">
+              <img 
+                src="/mark-photo.jpg" 
+                alt="Mark DeCourcy" 
+                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+              />
             </div>
-            <div className="bg-slate-50 p-4 rounded-lg">
-              <h3 className="font-bold text-slate-900 mb-2">Group Sessions</h3>
-              <p className="text-slate-600">Collaborative learning for small groups of students.</p>
-              <p className="mt-2 font-semibold text-blue-600">Rate: [Contact for Pricing]</p>
+            <h1 className="font-serif text-4xl mb-2 tracking-tight text-stone-50">Mark DeCourcy</h1>
+            <p className="text-stone-400 font-bold uppercase tracking-[0.2em] text-[10px] mb-8">
+              AP Macroeconomics Specialist
+            </p>
+          </div>
+
+          {/* Quick Credentials */}
+          <div className="space-y-8 mb-12 border-t border-stone-100/10 pt-10">
+            <div>
+              <div className="text-3xl font-serif text-amber-200 mb-1">30+ Years</div>
+              <p className="text-stone-400 text-[10px] uppercase tracking-widest font-black">Teaching Experience</p>
+            </div>
+            <div>
+              <div className="text-3xl font-serif text-amber-200 mb-1">28 Years</div>
+              <p className="text-stone-400 text-[10px] uppercase tracking-widest font-black">Fayette County AP Macro</p>
             </div>
           </div>
-        </section>
 
-        <section className="text-center">
-          <h2 className="text-2xl font-semibold text-slate-800 mb-4">Ready to get started?</h2>
-          <a 
-            href="mailto:mark_decourcy@yahoo.com" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-200"
-          >
-            Contact Mark
-          </a>
-          <p className="mt-4 text-slate-500">mark_decourcy@yahoo.com</p>
-        </section>
+          {/* Rates */}
+          <div className="bg-stone-900/40 border border-stone-100/5 p-6 mb-10 rounded-sm">
+            <h3 className="text-amber-200/50 uppercase tracking-widest text-[9px] font-black mb-4 italic">Private Instruction Rates</h3>
+            <div className="flex justify-between items-baseline mb-3">
+              <span className="text-stone-300 text-sm font-serif italic">Full Session (60m)</span>
+              <span className="text-xl font-serif text-stone-50">$80</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="text-stone-300 text-sm font-serif italic">Half Session (30m)</span>
+              <span className="text-xl font-serif text-stone-50">$50</span>
+            </div>
+          </div>
+
+          <div className="mt-auto pt-8">
+            <a 
+              href="mailto:mark_decourcy@yahoo.com" 
+              className="block bg-amber-200 hover:bg-amber-100 text-red-950 font-black py-4 px-6 text-center transition-all duration-300 uppercase tracking-widest text-xs shadow-xl"
+            >
+              Request Consultation
+            </a>
+          </div>
+        </aside>
+
+        {/* Main: The Content Column */}
+        <article className="flex-1 p-8 md:p-16 lg:p-20 overflow-y-auto">
+          {/* Philosophy */}
+          <section className="mb-20">
+            <h2 className="text-[#991b1b] font-black text-[10px] uppercase tracking-[0.4em] mb-6">Pedagogical Philosophy</h2>
+            <h3 className="font-serif text-4xl md:text-5xl text-slate-900 mb-8 leading-[1.15] max-w-2xl">
+              Teacher-led instruction meets <span className="italic text-stone-500">student-centered mastery.</span>
+            </h3>
+            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl font-light">
+              With three decades in the classroom, I’ve refined a methodology that simplifies complex aggregate models into intuitive concepts. I specialize in bridging the gap between theory and the <strong>graphical precision</strong> required for AP success.
+            </p>
+          </section>
+
+          {/* Specializations Grid - 3x2 Layout */}
+          <section className="mb-12">
+            <h2 className="text-stone-400 font-black text-[10px] uppercase tracking-[0.4em] mb-10">Strategic Focus Areas</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+              <div className="border-l-2 border-amber-200 pl-8">
+                <h4 className="font-serif text-xl mb-3 text-slate-900">AP Macro Test Prep</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">High-weight curriculum mastery focused on scoring rubrics and timing strategies to secure top-tier results.</p>
+              </div>
+              <div className="border-l-2 border-amber-200 pl-8">
+                <h4 className="font-serif text-xl mb-3 text-slate-900">Foundational Graphing</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">Comprehensive command of AD/AS, Money Markets, Loanable Funds, and the Phillips Curve models.</p>
+              </div>
+              <div className="border-l-2 border-amber-200 pl-8">
+                <h4 className="font-serif text-xl mb-3 text-slate-900">Modern Monetary Policy</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">Specialized instruction on <strong>Ample vs. Limited Reserves</strong>—a nuanced requirement of the current AP standards.</p>
+              </div>
+              <div className="border-l-2 border-amber-200 pl-8">
+                <h4 className="font-serif text-xl mb-3 text-slate-900">Budget Challenge</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">Practical application of <strong>Personal Finance</strong> through the specialized Budget Challenge program curriculum.</p>
+              </div>
+              <div className="border-l-2 border-amber-200 pl-8">
+                <h4 className="font-serif text-xl mb-3 text-slate-900">Core Methodologies</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">Deep integration of Case & Fair and Krugman & Wells principles for undergraduate-level academic rigor.</p>
+              </div>
+              <div className="border-l-2 border-amber-200 pl-8">
+                <h4 className="font-serif text-xl mb-3 text-slate-900">FRQ Dissection</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">Strategic training on Free Response Questions to ensure students can articulate complex economic shifts clearly.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Footer inside content area */}
+          <footer className="mt-auto pt-10 border-t border-stone-100 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.3em] font-bold text-stone-400">
+            <p>Mark DeCourcy Tutoring • Fayette County, GA</p>
+            <p className="mt-4 md:mt-0">© {new Date().getFullYear()} All Rights Reserved</p>
+          </footer>
+        </article>
       </main>
-
-      <footer className="mt-12 text-slate-400 text-sm">
-        © {new Date().getFullYear()} Mark DeCourcy Tutoring. All rights reserved.
-      </footer>
     </div>
   );
 }
